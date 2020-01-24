@@ -60,6 +60,8 @@ O   |
      |
 =========''']
 
+# Welcome to the new hangman
+
 
 class Hangman:
 	def __init__(self,word):
