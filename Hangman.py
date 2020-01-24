@@ -60,8 +60,6 @@ O   |
      |
 =========''']
 
-# Welcome to the new hangman
-
 
 class Hangman:
 	def __init__(self,word):
@@ -107,10 +105,14 @@ class Hangman:
 			print (letter,)
 		print ()
 
+
 def rand_word():
-        with open("/home/pi/Downloads/words.txt", "rt") as f:
-                bank=f.readlines()
-        return bank[random.randint(0,len(bank))]
+    with open("words.txt", "r") as myfile:
+        content = myfile.read()
+        words= content.split()
+        #words = readFile()
+        myWord = random.choice(words)
+        return myWord
 
 def main():
 	game = Hangman(rand_word())
@@ -127,6 +129,7 @@ def main():
 		print ('The word was ' + game.word)
 		
 	print ('\nGoodbye!\n')
+	
 		
 if __name__ == "__main__":
 	main()
