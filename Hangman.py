@@ -59,7 +59,7 @@ O   |
 / \  |
      |
 =========''']
-# Making a change to test the github
+
 
 class Hangman:
 	def __init__(self,word):
